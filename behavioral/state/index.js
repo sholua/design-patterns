@@ -6,6 +6,7 @@ console.log(myOrder.state.name);
 
 myOrder.nextState();
 console.log(myOrder.state.name);
+myOrder.cancelOrder();
 
 myOrder.nextState();
 console.log(myOrder.state.name);

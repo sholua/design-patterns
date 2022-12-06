@@ -1,4 +1,4 @@
-const WaitingForPayment = require('./WaitingForPayment');
+const WaitingForPayment = require("./WaitingForPayment");
 
 class Order {
   constructor() {
@@ -7,6 +7,12 @@ class Order {
 
   nextState() {
     this.state = this.state.next();
+  }
+
+  cancelOrder() {
+    this.state.name === "watingforPayment"
+      ? console.log("Order is canceled")
+      : console.log("Order cannot be canceled");
   }
 }
 
